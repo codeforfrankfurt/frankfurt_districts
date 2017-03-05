@@ -7,7 +7,6 @@ const COLOR = '#000';
 
 class FrankfurtMap extends Component {
   colorDistricts = () => {
-
     const {
       data,
       } =this.props;

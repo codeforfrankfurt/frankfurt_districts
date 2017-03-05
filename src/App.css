@@ -1,24 +1,75 @@
-.App {
-  text-align: center;
+body {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.align {
+    width: 1166px;
+    margin: 0 auto;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h1 {
+    font-family: Clutch Sans;
+    font-size: 60px;
+    text-align: center;
+    color: #666666;
+    font-weight: 200;
 }
 
-.App-intro {
-  font-size: large;
+.map {
+    width: 930px;
+    border: 1px solid #b6b6b6;
+    float: left;
+    display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.chooses {
+    display: inline-block;
+    padding-left: 20px;
+    width: 214px;
+}
+
+.chooses li {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+.chooses li a {
+    color: #666666;
+}
+
+.chooses li a.active {
+    color: #666666;
+    text-decoration: none;
+    cursor: default;
+}
+
+.info {
+    width: 276px;
+    background-color: white;
+    border: 1px solid #ebebeb;
+    position: relative;
+    height: 300px;
+    margin-top: -244px;
+    margin-left: 20px;
+}
+
+.districtname {
+    position: absolute;
+    width: 276px;
+    text-align: -webkit-center;
+    padding: 20px 0;
+    background-color: #ebebeb;
+    text-transform: uppercase;
+    font-family: Clutch Sans;
+    color: #666666;
+    font-size: 31px;
+    height: 36px;
+}
+
+.info p {
+    position: absolute;
+    margin-top: 97px;
+    margin-left: 20px;
+    display: block;
 }
