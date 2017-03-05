@@ -18,6 +18,7 @@ export const spd = () => {
     'SPD voters'
   );
 }
+
 export const afd = () => {
   return extractDataHelper(
     rawData,
