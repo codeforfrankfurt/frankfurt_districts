@@ -3,7 +3,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import './map.css';
 
-const COLOR = '#000';
+const COLOR = '#661ecb';
 
 class FrankfurtMap extends Component {
   colorDistricts = () => {
