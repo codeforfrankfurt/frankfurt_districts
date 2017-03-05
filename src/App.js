@@ -9,6 +9,7 @@ import {
   populationDensity,
   populationDensityDiff,
 } from './dataGetters/stadtteilprofile-bauen-wohnen';
+import districtsInfo from './data/districtsInfo';
 
 const dataSets = [{
   id: 'test',
@@ -33,10 +34,12 @@ class App extends Component {
   }
 
   render() {
+    const selectedDataSet = _.find(dataSets, dataSet => dataSet.id === this.state.selectedDataSetId) || {};
+console.log(selectedDataSet)
     return (
       <div>
         <FrankfurtMap
-          data={_.find(dataSets, dataSet => dataSet.id === this.state.selectedDataSetId).data}
+          data={selectedDataSet.data}
           onDistrictIdSelect={(districtId) => this.setState({selectedDistrictId: districtId})}
         />
         <DataSetList
@@ -47,6 +50,9 @@ class App extends Component {
         {this.state.selectedDistrictId && (
           <DistrictInfo
             districtId={this.state.selectedDistrictId}
+            districtInfo={districtsInfo[this.state.selectedDistrictId]}
+            dataSetName={selectedDataSet.name}
+            dataSetValue={selectedDataSet.data[this.state.selectedDistrictId]}
           />
         )}
       </div>

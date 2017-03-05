@@ -10,8 +10,8 @@ class FrankfurtMap extends Component {
     const {
       data,
       } =this.props;
-    const max = _.max(_.values(data));
-    const min = _.min(_.values(data));
+    const max = _.max(_.values(data).filter(d => d));
+    const min = _.min(_.values(data).filter(d => d));
     console.log(min, max);
     $('#map .district').map((i, el) => {
       const value = data[el.id]
