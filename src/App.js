@@ -36,7 +36,7 @@ class App extends Component {
 
   render() {
     const selectedDataSet = _.find(dataSets, dataSet => dataSet.id === this.state.selectedDataSetId) || {};
-console.log(selectedDataSet)
+
     return (
       <div>
         <FrankfurtMap

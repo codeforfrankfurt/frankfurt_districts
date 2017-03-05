@@ -16,16 +16,16 @@ class FrankfurtMap extends Component {
     $('#map .district').map((i, el) => {
       const value = data[el.id]
       if (value) {
-        const opacity = (value - min) / max;
+        const opacity = (value - min) / (max - min);
         el.style.opacity = opacity;
         el.setAttribute('fill', COLOR);
+        //console.log(el.id);
+        //console.log(value);
+        //console.log(opacity);
       } else {
         el.style.opacity = 1;
         el.setAttribute('fill', '#ccc');
       }
-      //console.log(el.id);
-      //console.log(value);
-      //console.log(opacity);
     })
 
   }
