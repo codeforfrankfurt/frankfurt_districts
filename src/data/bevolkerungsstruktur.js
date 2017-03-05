@@ -1,4 +1,4 @@
-[
+export default [
   {
     "Codes": "1",
     "Stadtteil": "Altstadt",

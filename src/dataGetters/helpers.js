@@ -9,3 +9,11 @@ export const extractDataHelper = (rawData, id, name) => {
     data,
   };
 }
+
+export const extractData = (rawData, id, districtKey = 'Stadtteil') => {
+  const data = {};
+  rawData.map(district => {
+    data[district[districtKey].trim()] = parseFloat(district[id].replace(',', '.'))
+  })
+  return data
+}

@@ -41,11 +41,6 @@ h1 {
     border-bottom: 1px solid #b6b6b6;
 }
 
-.chooses li a.active {
-    border-bottom: none;
-    cursor: default;
-}
-
 .chooses li a:active {
     color: #975bec;
     border-bottom: none;
@@ -57,9 +52,9 @@ h1 {
 
 .info {
     width: 276px;
-    position: relative;
+    position: absolute;
     min-height: 300px;
-    margin-top: -143px;
+    margin-top: 23px;
     margin-left: 20px;
     color: #666666;
 }
@@ -85,6 +80,7 @@ h1 {
     padding: 0 20px 10px 20px;
     background-color: white;
     border: 1px solid #ebebeb;
+    width: 236px;
 }
 
 .info p a {

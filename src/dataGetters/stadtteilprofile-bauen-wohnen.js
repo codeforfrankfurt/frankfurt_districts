@@ -16,3 +16,27 @@ export const populationDensityDiff = () => {
     'Population density diff'
   );
 }
+
+export const spacePerApartment = () => {
+  return extractDataHelper(
+    rawData,
+    'Bauen und Wohnen Wohnfläche in m² je Wohnung  2012',
+    'Space per apartment'
+  );
+}
+
+export const newBuildings = () => {
+  return extractDataHelper(
+    rawData,
+    'Bauen und Wohnen Neubauquotient  2012',
+    'New buildings'
+  );
+}
+
+export const newBuildingsDiff = () => {
+  return extractDataHelper(
+    rawData,
+    'Bauen und Wohnen Neubauquotient  diff',
+    'New buildings diff'
+  );
+}
