@@ -1,0 +1,6 @@
+.district {
+    cursor: pointer;
+}
+.district:hover {
+    opacity: 1;
+}
