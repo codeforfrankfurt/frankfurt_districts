@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import FrankfurtMap from './FrankfurtMap/FrankfurtMap';
 import DataSetList from './DataSetList/DataSetList';
 import './App.css';
+import _ from 'lodash';
 
 const dataSets = [{
   id: 'test',
@@ -28,7 +29,7 @@ class App extends Component {
     return (
       <div>
         <FrankfurtMap
-          data={dataSets.find(dataSet => dataSet.id === this.state.selectedDataSetId).data}
+          data={_.find(dataSets, dataSet => dataSet.id === this.state.selectedDataSetId).data}
           onDistrictIdSelect={(districtId) => this.setState({selectedDistrictId: districtId})}
         />
         <DataSetList

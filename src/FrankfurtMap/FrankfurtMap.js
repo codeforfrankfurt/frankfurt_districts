@@ -18,9 +18,9 @@ class FrankfurtMap extends Component {
       const opacity = (value - min) / max;
       el.style.opacity = opacity;
       el.setAttribute('fill', COLOR);
-      console.log(el.id);
-      console.log(value);
-      console.log(opacity);
+      //console.log(el.id);
+      //console.log(value);
+      //console.log(opacity);
     })
 
   }
@@ -41,7 +41,7 @@ class FrankfurtMap extends Component {
     //})
   }
 
-  componentWillReceiveProps() {
+  componentDidUpdate(nextProps) {
     this.colorDistricts()
   }
 
