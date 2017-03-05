@@ -22,7 +22,7 @@ import {
   cdu,
   spd,
   afd,
-} from './dataGetters/stv2016ortsbezirke';
+} from './dataGetters/stv2016stadtteile';
 import districtsInfo from './data/districtsInfo';
 
 const dataSets = [
