@@ -5,6 +5,10 @@ import DataSetList from './DataSetList/DataSetList';
 import DistrictInfo from './DistrictInfo/DistrictInfo';
 import './App.css';
 import _ from 'lodash';
+import {
+  populationDensity,
+  populationDensityDiff,
+} from './dataGetters/stadtteilprofile-bauen-wohnen';
 
 const dataSets = [{
   id: 'test',
@@ -14,7 +18,10 @@ const dataSets = [{
   id: 'test1',
   name: ' Test name 1',
   data: require('./data/test1').default,
-}];
+},
+  populationDensity(),
+  populationDensityDiff(),
+];
 
 class App extends Component {
   constructor() {
