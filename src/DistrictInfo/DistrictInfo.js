@@ -3,7 +3,7 @@ import _ from 'lodash';
 
 const DistrictInfo = ({
   districtId,
-  districtInfo,
+  districtInfo = {},
   dataSetName,
   dataSetValue,
   }) => {
@@ -11,7 +11,7 @@ const DistrictInfo = ({
     <div className="info">
       <div className="districtname">{districtId}</div>
       <p>
-        {dataSetName}: {dataSetValue}
+        {dataSetName}: {dataSetValue ? dataSetValue : 'no data'}
         <br />
         {_.get(districtInfo, 'description')}
         <br/>
