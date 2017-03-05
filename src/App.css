@@ -1,5 +1,5 @@
 body {
-    width:100%;
+    width: 100%;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -18,13 +18,13 @@ h1 {
 
 .map {
     width: 921px;
-    border:1px solid #b6b6b6;
+    border: 1px solid #b6b6b6;
     float: left;
     display: inline-block;
     margin-bottom: 50px;
 }
 
-.chooses{
+.chooses {
     display: inline-block;
     padding-left: 20px;
     width: 223px;
@@ -35,11 +35,15 @@ h1 {
     margin-bottom: 15px;
 }
 
-
 .chooses li a {
     color: #666666;
     text-decoration: none;
     border-bottom: 1px solid #b6b6b6;
+}
+
+.chooses li a.active {
+    border-bottom: none;
+    cursor: default;
 }
 
 .chooses li a:active {
@@ -80,7 +84,7 @@ h1 {
     font-size: 15px;
     padding: 0 20px 10px 20px;
     background-color: white;
-    border: 1px solid  #ebebeb;
+    border: 1px solid #ebebeb;
 }
 
 .info p a {
