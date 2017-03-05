@@ -10,15 +10,17 @@ const DistrictInfo = ({
   return (
     <div className="info">
       <div className="districtname">{districtId}</div>
-      <p>
-        {dataSetName}: {dataSetValue ? dataSetValue : 'no data'}
-        <br />
-        {_.get(districtInfo, 'description')}
-        <br/>
-        <br/>
-        {districtInfo.rentUrl && (
-          <a target="_blank" href={districtInfo.rentUrl}>Look for a flat in {districtId}</a>
-        )}</p>
+      <div className="text">
+        <p>
+          <strong>{dataSetName}</strong>: {dataSetValue ? dataSetValue : 'no data'} <br />
+          <br />
+          {_.get(districtInfo, 'description')}
+          <br />
+          <br />
+          {districtInfo.rentUrl && (
+            <a target="_blank" href={districtInfo.rentUrl}>Search flats in {districtId}</a>
+          )}</p>
+      </div>
     </div>
   )
 };
