@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import FrankfurtMap from './FrankfurtMap/FrankfurtMap';
 import DataSetList from './DataSetList/DataSetList';
+import DistrictInfo from './DistrictInfo/DistrictInfo';
 import './App.css';
 import _ from 'lodash';
 
@@ -13,8 +14,7 @@ const dataSets = [{
   id: 'test1',
   name: ' Test name 1',
   data: require('./data/test1').default,
-}, ]
-
+}];
 
 class App extends Component {
   constructor() {
@@ -37,6 +37,11 @@ class App extends Component {
           onSelectedDataSetIdSelect={dataSetId => this.setState({selectedDataSetId: dataSetId})}
           dataSets={dataSets}
         />
+        {this.state.selectedDistrictId && (
+          <DistrictInfo
+            districtId={this.state.selectedDistrictId}
+          />
+        )}
       </div>
     );
   }
