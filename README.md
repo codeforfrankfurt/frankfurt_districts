@@ -36,6 +36,12 @@ Possible practical use: service to help you choose a district where you wnat to 
 
 4.Add info and links immobilienscout24 for each district
 
+# How to run localy
+```
+npm i
+npm start
+```
+
 # Contributors:
 Alexander Nosov
 
