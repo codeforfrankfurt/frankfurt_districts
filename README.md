@@ -8,13 +8,13 @@ Built during Open Data Hackathon 2017 at Frankfurt http://hackfrankfurt.org/
 
 
 # Why
-Just experimening for now. 
+Just experimenting for now. 
 
 Possible practical use: service for choosing a perfect district to live (Tinder for districts!)
 
 # How to use
 1. Open https://codeforfrankfurt.github.io/frankfurt_districts/
-2. Click on one of the parameters on the right. You will see colored district on the left. Darker color meens selected parameter is higher in this district.
+2. Click on one of the parameters on the right. You will see colored districts on the left. Darker color means selected parameter is higher in this district.
 3. Click on any district to see its value plus some info about this district (Only for Altstadt, Nordend, Bergen-Enkheim, Niederrad)
 
 # TODO
@@ -24,7 +24,7 @@ Possible practical use: service for choosing a perfect district to live (Tinder 
 - prices
 - traffic jams
 - bars (parse from foursquare)
-- data parserd from Airbnb
+- data parsed from Airbnb
 - ... ?
 
 2.Styling and usability
@@ -36,7 +36,7 @@ Possible practical use: service for choosing a perfect district to live (Tinder 
 
 4.Add info and links immobilienscout24 for each district
 
-# How to run localy
+# How to run locally
 ```
 npm i
 npm start
