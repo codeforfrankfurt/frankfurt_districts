@@ -10,7 +10,7 @@ Built during Open Data Hackathon 2017 at Frankfurt http://hackfrankfurt.org/
 # Why
 Just experimening for now. 
 
-Possible practical use: service to help you choose a district where you wnat to live.
+Possible practical use: service for choosing a perfect district to live (Tinder for districts!)
 
 # How to use
 1. Open https://codeforfrankfurt.github.io/frankfurt_districts/
