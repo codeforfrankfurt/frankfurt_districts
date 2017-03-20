@@ -88,3 +88,8 @@ h1 {
     text-decoration: none;
     border-bottom: 1px solid #975bec;
 }
+
+.leaflet-container {
+    height: 400px;
+    width: 100%;
+}
