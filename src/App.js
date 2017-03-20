@@ -18,12 +18,7 @@ import {
   women,
   nationalitiesCount,
 } from './dataGetters/bevolkerungsstruktur';
-import {
-  cdu,
-  spd,
-  grune,
-  afd,
-} from './dataGetters/stv2016stadtteile';
+import getPoliticsDataSets from './dataGetters/stv2016stadtteile';
 import districtsInfo from './data/districtsInfo';
 
 const dataSetGroups = [{
@@ -39,15 +34,8 @@ const dataSetGroups = [{
   ],
 }, {
   name: 'Politics',
-  dataSets: [
-    cdu(),
-    spd(),
-    grune(),
-    afd(),
-  ]
+  dataSets: getPoliticsDataSets(),
 }];
-
-console.log(dataSetGroups);
 
 class App extends Component {
   constructor() {
@@ -62,7 +50,6 @@ class App extends Component {
   render() {
     const dataSets = _.flatten(dataSetGroups.map(dataSetGroup => dataSetGroup.dataSets));
     const selectedDataSet = _.find(dataSets, dataSet => dataSet.id === this.state.selectedDataSetId) || {};
-    console.log(dataSets);
 
     return (
       <div>

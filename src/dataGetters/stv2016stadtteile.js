@@ -4,34 +4,36 @@ import {extractDataHelper} from './helpers';
 // http://daten.frankfurt.de/dataset/kommunalwahlen-2016
 // Stadtverordnetenwahl 2016 Stadtteile JSON
 
-export const cdu = () => {
-  return extractDataHelper(
+/**
+ * get data for all parties
+ * @returns {Array}
+ */
+export default function getPoliticsDataSets() {
+  const parties = [
+    ['CDU in %', ''],
+    ['SPD in %', ''],
+    ['GRÜNE in %', ''],
+    ['DIE LINKE in %', ''],
+    ['FDP in %', ''],
+    ['BFF in %', ''],
+    ['PIRATEN in %', ''],
+    ['ÖkoLinX-ARL in %', ''],
+    ['ELF in %', ''],
+    ['REP in %', ''],
+    ['Graue Panther in %', ''],
+    ['ALFA in %', ''],
+    ['IBF in %', ''],
+    ['Liberale in %', ''],
+    ['P.O.P. in %', ''],
+    ['FREIE WÄHLER in %', ''],
+    ['AfD in %', ''],
+    ['NPD in %', ''],
+    ['DIE PARTEI in %', ''],
+    ['dFfm in %', ''],
+  ];
+  return parties.map(party =>  extractDataHelper(
     rawData,
-    "CDU in %",
-    'CDU voters'
-  );
-}
-
-export const spd = () => {
-  return extractDataHelper(
-    rawData,
-    "SPD in %",
-    'SPD voters'
-  );
-}
-
-export const grune = () => {
-  return extractDataHelper(
-    rawData,
-    "GRÜNE in %",
-    "Grüne voters"
-  );
-}
-
-export const afd = () => {
-  return extractDataHelper(
-    rawData,
-    "AfD in %",
-    'AfD voters'
-  );
+    party[0],
+    party[0]
+  ));
 }
