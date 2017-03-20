@@ -21,6 +21,7 @@ import {
 import {
   cdu,
   spd,
+  grune,
   afd,
 } from './dataGetters/stv2016stadtteile';
 import districtsInfo from './data/districtsInfo';
@@ -37,6 +38,7 @@ const dataSets = [
   nationalitiesCount(),
   cdu(),
   spd(),
+  grune(),
   afd(),
 ];
 

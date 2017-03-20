@@ -11,11 +11,20 @@ export const cdu = () => {
     'CDU voters'
   );
 }
+
 export const spd = () => {
   return extractDataHelper(
     rawData,
     "SPD in %",
     'SPD voters'
+  );
+}
+
+export const grune = () => {
+  return extractDataHelper(
+    rawData,
+    "GRÜNE in %",
+    "Grüne voters"
   );
 }
 
