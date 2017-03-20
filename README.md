@@ -19,7 +19,8 @@ Possible practical use: service for choosing a perfect district to live (Tinder 
 
 # TODO
 1.add more data
-- voters for different parties
+- ~~voters for different partie~~
+- more from bevoelkerung data set
 - trees
 - prices
 - traffic jams
@@ -28,9 +29,10 @@ Possible practical use: service for choosing a perfect district to live (Tinder 
 - ... ?
 
 2.Styling and usability
+- leaflet
 - hover effects
 - remove unclickable areas on map
-- split paramters by group
+- ~~split paramters by group~~
 
 3.Help text and about section
 
