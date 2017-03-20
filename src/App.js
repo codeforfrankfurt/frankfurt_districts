@@ -26,21 +26,28 @@ import {
 } from './dataGetters/stv2016stadtteile';
 import districtsInfo from './data/districtsInfo';
 
-const dataSets = [
-  populationDensity(),
-  //populationDensityDiff(),
-  spacePerApartment(),
-  newBuildings(),
-  //newBuildingsDiff(),
-  foreigners(),
-  averageAge(),
-  women(),
-  nationalitiesCount(),
-  cdu(),
-  spd(),
-  grune(),
-  afd(),
-];
+const dataSetGroups = [{
+  name: 'General',
+  dataSets: [
+    populationDensity(),
+    spacePerApartment(),
+    newBuildings(),
+    foreigners(),
+    averageAge(),
+    women(),
+    nationalitiesCount(),
+  ],
+}, {
+  name: 'Politics',
+  dataSets: [
+    cdu(),
+    spd(),
+    grune(),
+    afd(),
+  ]
+}];
+
+console.log(dataSetGroups);
 
 class App extends Component {
   constructor() {
@@ -53,7 +60,9 @@ class App extends Component {
 
 
   render() {
+    const dataSets = _.flatten(dataSetGroups.map(dataSetGroup => dataSetGroup.dataSets));
     const selectedDataSet = _.find(dataSets, dataSet => dataSet.id === this.state.selectedDataSetId) || {};
+    console.log(dataSets);
 
     return (
       <div>
@@ -72,7 +81,7 @@ class App extends Component {
         <DataSetList
           selectedDataSetId={this.state.selectedDataSetId}
           onSelectedDataSetIdSelect={dataSetId => this.setState({selectedDataSetId: dataSetId})}
-          dataSets={dataSets}
+          dataSetGroups={dataSetGroups}
         />
       </div>
     );
