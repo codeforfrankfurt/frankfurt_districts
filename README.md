@@ -29,10 +29,14 @@ Possible practical use: service for choosing a perfect district to live (Tinder 
 - ... ?
 
 2.Styling and usability
-- leaflet
+- ~~leaflet~~
 - hover effects
-- remove unclickable areas on map
+- ~~remove unclickable areas on map~~
 - ~~split paramters by group~~
+- full screen map
+- legend
+- map colors
+- clickable districts
 
 3.Help text and about section
 
