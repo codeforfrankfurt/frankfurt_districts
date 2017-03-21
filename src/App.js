@@ -49,14 +49,15 @@ class App extends Component {
   render() {
     const dataSets = _.flatten(dataSetGroups.map(dataSetGroup => dataSetGroup.dataSets));
     const selectedDataSet = _.find(dataSets, dataSet => dataSet.id === this.state.selectedDataSetId) || {};
-
     //<FrankfurtMap
     //  data={selectedDataSet.data}
     //  onDistrictIdSelect={(districtId) => this.setState({selectedDistrictId: districtId})}
     ///>
     return (
       <div>
-        <FrankfurtMapLeaflet />
+        <FrankfurtMapLeaflet
+          data={selectedDataSet.data}
+        />
         {this.state.selectedDistrictId && (
           <DistrictInfo
             districtId={this.state.selectedDistrictId}
